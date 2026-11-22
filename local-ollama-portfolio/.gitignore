@@ -1,0 +1,32 @@
+# Runtime and private files
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+*.sqlite3
+*.db
+models/
+ollama_models/
+# Generated test artifacts (review and sanitise before adding evidence)
+section4_*.txt
+section4_*.json
+section4_*.md
+section5_*.txt
+section5_*.json
+section5_*.md
+section6_*.txt
+section6_*.json
+section6_*.md
+section7_*.txt
+section7_*.json
+section7_*.md
