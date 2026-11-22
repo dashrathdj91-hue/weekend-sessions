@@ -5,12 +5,15 @@
 **Runtime:** Windows / JupyterLab · Ollama · `qwen3:1.7b`  
 **Cloud costs:** No AWS/Bedrock required for these local examples.
 
-This repository contains **11 practical Jupyter notebooks** organised across four hands-on sections of an AI-agent learning program. The author reported passing the eight code cells in each completed practical while running Ollama locally. The notebooks committed here are **clean source copies**; they do not include executed cell outputs or personal environment logs. Local execution results should be added separately after verification.
+This folder contains **14 practical Jupyter notebooks** covering all seven course section numbers: three **new local introductory alternatives** in Sections 1–3 and eleven previously prepared local exercises in Sections 4–7. The learner reported successful runs for the earlier exercises; the **new Sections 1–3 notebooks have not yet been executed and verified on their Windows PC**. All files are clean sources without executed cell outputs. The original upstream teaching materials by Shivank Agrawal remain in the parent repository and are linked from the new guides.
 
 ## Portfolio projects
 
 | Area | Notebook | What it demonstrates |
 |---|---|---|
+| Getting started | [First Agent (local)](section-01-first-agent/01_first_agent_local.ipynb) | Local Ollama chat, system prompts, simple validation and fictional document summary — **new/unverified** |
+| Tools | [Python Tool Dispatcher (local)](section-02-agent-tools/02_agent_tools_local.ipynb) | Deterministic tool execution with fictional inventory, allowlist and Qwen3 result explanation — **new/unverified** |
+| Memory | [Per-user Demo Memory (local)](section-03-agent-memory/03_agent_memory_local.ipynb) | Fictional user preferences, per-user context and session reset — **new/unverified** |
 | Multi-agent | [Supervisor–Worker](section-04-multi-agent/01_supervisor_worker.ipynb) | Specialised news, finance and sentiment workers; supervisor synthesis on fictional data |
 | Multi-agent | [Agent as Tool](section-04-multi-agent/02_agent_as_tool.ipynb) | Teacher orchestrator invoking math, writing and science specialists |
 | Multi-agent | [Graph Pattern](section-04-multi-agent/03_graph_pattern.ipynb) | Rule-governed routing across order-check, risk and fulfilment nodes |
@@ -37,7 +40,7 @@ Open a notebook and run the code cells from top to bottom with **Shift+Enter**. 
 
 ## Evidence & limitations
 
-- **Notebooks:** Source versions of the working examples prepared for local practice. The author reported all local practice cells passing; executed local notebooks and generated reports have not been retrieved from their laptop.
+- **Notebooks:** The learner reported that the earlier 11 local exercises (Sections 4–7) passed. The newly created three introductory notebooks (Sections 1–3) have **not** been run or independently verified on the learner's machine. Completed execution logs and generated reports have not been retrieved from their laptop.
 - **Data:** Several examples use fictional business records, orders, weather, flight and finance cases. They are not live commercial data.
 - **Agent orchestration:** Some lessons use Python-controlled orchestration instead of fully autonomous SDK planners. In particular, the A2A notebook demonstrates compatible local HTTP patterns, **not** the complete official A2A SDK lifecycle.
 - **Deployment:** FastAPI and Docker run locally. **AWS Lambda, ECS Fargate and AgentCore cloud deployment are not claimed** as completed.
@@ -47,6 +50,9 @@ Open a notebook and run the code cells from top to bottom with **Shift+Enter**. 
 ## Repository structure
 
 ```text
+section-01-first-agent/          1 new notebook
+section-02-agent-tools/          1 new notebook
+section-03-agent-memory/         1 new notebook
 section-04-multi-agent/          4 notebooks
 section-05-mcp-a2a/             3 notebooks
 section-06-local-deployment/    2 notebooks
