@@ -1,0 +1,27 @@
+# This workflow is included for standalone reuse of this portfolio.
+# As this file is under local-ollama-portfolio/.github/, it is
+# NOT active as a GitHub Actions workflow of the parent repository.
+name: Validate local notebook structure
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install nbformat
+      - name: Validate local notebook structure (no LLM calls)
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import nbformat
+          files = sorted(Path('.').rglob('*.ipynb'))
+          assert len(files) == 11, f'Expected 11 notebooks, got {len(files)}'
+          for f in files:
+              nbformat.validate(nbformat.read(f, as_version=4))
+              print('VALID', f)
+          PY
